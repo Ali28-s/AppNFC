@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "name": "AppNFC",
+    "slug": "AppNFC",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "plugins": [
+      [
+        "react-native-nfc-manager",
+        {
+          "icon": "./assets/icon.png"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "AppNFC necesita acceso a tus fotos para registrar estudiantes.",
+          "cameraPermission": "AppNFC necesita acceso a la cámara para tomar la foto del estudiante.",
+          "microphonePermission": false
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ],
+      "expo-sharing"
+    ],
+    "android": {
+      "package": "com.tuusuario.appnfc",
+      "permissions": [
+        "android.permission.NFC"
+      ]
+    },
+    "extra": {
+      "eas": {
+        "projectId": "1c34c08b-2e7e-4933-8a6e-51b1f958aaef"
+      }
+    }
+  }
+}
